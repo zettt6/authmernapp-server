@@ -6,12 +6,7 @@ const router = require('./router')
 const PORT = process.env.PORT || 4000
 const app = express()
 
-const corsOptions = {
-  origin: 'https://authmernapp-client.herokuapp.com/',
-  optionsSuccessStatus: 200,
-}
-
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 app.use('/auth', router)
 
