@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 4000
 const app = express()
 
 const corsOptions = {
-  origin: 'https://authmernapp-server.herokuapp.com/',
+  origin: 'https://authmernapp-client.herokuapp.com/',
   optionsSuccessStatus: 200,
 }
 
