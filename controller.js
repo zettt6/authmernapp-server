@@ -47,7 +47,8 @@ class authController {
       if (!user) {
         return res.status(404).json({ message: `User ${email} not found` })
       }
-      if ((user.status = 'Blocked')) {
+      console.log(user)
+      if (user.status === 'Blocked') {
         return res.status(403).json({ message: `User was blocked` })
       }
       const validPassword = bcrypt.compareSync(password, user.password)
